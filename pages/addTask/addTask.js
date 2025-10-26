@@ -4,6 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const descriptionInput = document.getElementById('description');
   const deadlineInput = document.getElementById('deadline');
   const prioritySelect = document.getElementById('priority');
+  const cancelBtn = document.getElementById('cancel');
+  
+  cancelBtn.addEventListener('click', () => {
+    window.location.href = '/home.html'; 
+  });
 
   createBtn.addEventListener('click', () => {
     const title = titleInput.value.trim();

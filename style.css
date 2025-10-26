@@ -255,3 +255,53 @@ hr {
     padding: 20px;
   }
 }
+
+
+.status-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.status-badge.done {
+  background-color: #00c853;
+  color: #fff;
+}
+
+.status-badge.in-progress {
+  background-color: #ffab00;
+  color: #000;
+}
+
+.status-badge.rejected {
+  background-color: #d32f2f;
+  color: #fff;
+}
+
+.status-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.status-btn {
+  background: #1e1a2b;
+  color: #fff;
+  border: 1px solid #2c2540;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 4px 8px;
+  transition: all 0.2s ease;
+}
+
+.status-btn:hover {
+  background: #7b5cff;
+  border-color: #7b5cff;
+}
