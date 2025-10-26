@@ -73,9 +73,9 @@ function renderTasks(tasks) {
           ${labelMap[task.status] || "In Progress"}
         </span>
         <div class="status-controls">
-          <button class="status-btn done">✔️</button>
-          <button class="status-btn progress">⏳</button>
-          <button class="status-btn reject">❌</button>
+          <button class="status-btn done"><p>Done</p></button>
+          <button class="status-btn progress">In Progress...</button>
+          <button class="status-btn reject">Reject</button>
         </div>
       </div>
       <hr>
