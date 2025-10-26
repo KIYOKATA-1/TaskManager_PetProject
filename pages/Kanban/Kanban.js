@@ -35,4 +35,4 @@ document.getElementById("clear").addEventListener("click", () => {
   }
 });
 
-document.addEventListener("DOMContentLoaded", getTasks, navigateBack);
+document.addEventListener("DOMContentLoaded", getTasks);
