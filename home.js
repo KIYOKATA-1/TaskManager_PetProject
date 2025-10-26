@@ -58,8 +58,45 @@ function searchTasks(query) {
   renderTasks(filtered);
 }
 
+function openInstagram() {
+  const instButton = document.getElementById('inst');
+  if (!instButton) return;
+
+  instButton.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    const fileId = "1ua1eRw_2PVHBJb7G7iCW8HG--myb7sqX";
+    const previewUrl = `https://drive.google.com/file/d/${fileId}/preview`;
+
+    const popup = document.createElement('div');
+    popup.className = 'instagram-popup';
+    popup.innerHTML = `
+      <div class="instagram-content">
+        <span class="close-btn">&times;</span>
+        <iframe 
+          src="${previewUrl}" 
+          width="720" 
+          height="480" 
+          allow="autoplay" 
+          style="border:none;border-radius:10px;">
+        </iframe>
+      </div>
+    `;
+    document.body.appendChild(popup);
+
+    requestAnimationFrame(() => popup.classList.add('active'));
+
+    popup.querySelector('.close-btn').addEventListener('click', () => {
+      popup.classList.remove('active');
+      setTimeout(() => popup.remove(), 300);
+    });
+  });
+}
+
+
 document.addEventListener('DOMContentLoaded', () => {
   getTasks();
+  openInstagram();
 
   const searchInput = document.getElementById('searchInput');
   searchInput.addEventListener('input', (e) => {
